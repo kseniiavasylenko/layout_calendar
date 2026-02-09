@@ -7,6 +7,7 @@
   align-items: center;
   gap: $gap;
   padding: $padding;
+  width: $calendar-width;
 }
 
 .calendar__day {
@@ -19,17 +20,14 @@
   height: $day-size;
   width: $day-size;
 
- transition: transform 0.5s ease, background-color 0.5s ease;
+  transition: transform 0.5s ease, background-color 0.5s ease;
 
   &:hover {
     background-color: #ffbfcb;
     cursor: pointer;
     transform: translateY(-20px);
   }
-
-  transition: transform 0.5s ease;
 }
-
 
 @each $day, $index in $days {
   .calendar--start-#{$day} .calendar__day:first-child {
